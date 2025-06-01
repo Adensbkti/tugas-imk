@@ -23,6 +23,7 @@
             flex-wrap: wrap;
             gap: 10px;
             width: 100%;
+            justify-content: center;
 
         }
         input{
@@ -44,7 +45,7 @@
         }
 
         .konten .isi-konten img {
-            width: 200px;
+            width: 400px;
         }
 
         .footer .isi-footer {
@@ -69,14 +70,12 @@
             <ul>
                 <li><a href="../LandingPage.php">Beranda</a></li>
                 <li><a href="detailDestinasi.php">Destinasi Wisata</a></li>
-                <li><a href="#">Tiket & Tarif</a></li>
                 <li><a href="#">Galeri</a></li>
-                <li><a href="#">Artikel & Edukasi</a></li>
                 <li><a href="#">Kontak</a></li>
             </ul>
             <div class="btn">
-                <button class="btn-masuk">Masuk</button>
-                <button class="btn-daftar">Daftar</button>
+                <button onclick="window.location.href='../LoginForm.php'" class="btn-masuk">Masuk</button>
+                <button onclick="window.location.href='../DaftarForm.php'" class="btn-daftar">Daftar</button>
             </div>
         </div>
     </div>

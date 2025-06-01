@@ -1,3 +1,22 @@
+<?php
+session_start();
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    if (isset($_SESSION["akun"][$username]) && $_SESSION["akun"][$username] === $password) {
+        $_SESSION["login"] = $username;
+        header("Location: LandingPage.php"); 
+        exit;
+    } else {
+        $error = "Username atau Password salah!";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,10 +26,17 @@
     <title>Document</title>
 </head>
 <style>
-    body{
-        background-color:rgb(70, 50, 37);
+    body {
+        background-color: rgb(70, 50, 37);
         font-family: Arial, Helvetica, sans-serif;
+
+        /* Tambahkan ini untuk center vertikal dan horizontal */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* full viewport height */
     }
+
     * {
         padding: 0px;
         margin: 0px;
@@ -21,7 +47,6 @@
         max-width: 600px;
         display: flex;
         gap: 10px;
-        margin: 50px auto ;
         border-radius: 15px;
         box-shadow: 1px 1px 5px rgb(194, 193, 193);
         text-align: center;
@@ -29,7 +54,7 @@
         background-color: white;
     }
 
-    .form-login{
+    .form-login {
         width: 300px;
         display: flex;
         flex-direction: column;
@@ -71,22 +96,21 @@
     }
 
     button {
-            padding: 12px;
-            font-size: 14px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            width: 100%;
-        }
+        padding: 12px;
+        font-size: 14px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        width: 100%;
+    }
 
-        button:hover {
-            background-color: #2E7D32;
-        }
-
-
+    button:hover {
+        background-color: #2E7D32;
+    }
 </style>
+
 
 <body>
     <div class="box-login">
@@ -105,6 +129,7 @@
                 </div>
 
                 <button type="submit" name="login">Masuk</button>
+                <p class="mt-3">Belum punya akun? <a href="DaftarForm.php">Daftar di sini</a></p>
             </form>
         </div>
     </div>

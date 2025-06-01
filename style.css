@@ -94,8 +94,9 @@
   gap: 30px;
 }
 
-.beranda img {
-  margin: auto;
+.beranda {
+  text-align: center;
+  margin: 10px;
 }
 
 .destinasi-unggulan, .tiket-tarif, .galeri-mini {

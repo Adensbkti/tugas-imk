@@ -18,14 +18,12 @@
             <ul>
                 <li><a href="#">Beranda</a></li>
                 <li><a href="Pengunjung/detailDestinasi.php">Destinasi Wisata</a></li>
-                <li><a href="#">Tiket & Tarif</a></li>
                 <li><a href="Pengunjung/Galeri.php">Galeri</a></li>
-                <li><a href="#">Artikel & Edukasi</a></li>
                 <li><a href="#">Kontak</a></li>
             </ul>
             <div class="btn">
-                <button class="btn-masuk">Masuk</button>
-                <button class="btn-daftar">Daftar</button>
+                <button onclick="window.location.href='../LoginForm.php'" class="btn-masuk">Masuk</button>
+                <button onclick="window.location.href='../DaftarForm.php'" class="btn-daftar">Daftar</button>
             </div>
         </div>
 

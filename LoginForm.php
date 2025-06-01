@@ -30,11 +30,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         background-color: rgb(70, 50, 37);
         font-family: Arial, Helvetica, sans-serif;
 
-        /* Tambahkan ini untuk center vertikal dan horizontal */
+       
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh; /* full viewport height */
+        height: 100vh; 
     }
 
     * {
